@@ -1,0 +1,537 @@
+
+/* COLORS
+
+#fffbfe - porcelain
+#373737 - shadow grey
+#de3c4b - orange
+
+*/
+
+/* GENERAL */
+
+.html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    padding: 0;
+}
+
+p {
+    font-family: 'Helvetica', sans-serif;
+    color: #373737;
+}
+
+h1 {
+    font-family: "Instrument Serif", serif;
+    font-size: 5em;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-size: 4em;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 3em;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    height: 100vh;
+}
+
+h1#hero {
+    font-size: 10vw;
+    margin: 0;
+    padding: 0;
+    font-weight: 50;
+}
+
+h1#hero2 {
+    text-align: right;
+    font-size: 10vw;
+    font-weight: 50;
+}
+
+h2#hero-subtitle {
+    text-align: center;
+    font-weight: 100;
+    margin: 20vh 0 0px 0;
+    font-size: 1.25em;
+}
+
+h2#funnytag {
+    padding: 10px;
+    text-align: center;
+    font-weight: 100;
+    margin: 0px 0 20vh 0;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+h2#funnytag:hover {
+    color: #c6c6c6;
+}
+
+p#lolfunny {
+    color: #8b939c;
+}
+
+p#header-text {
+    align-self: flex-start;
+}
+
+
+/* ABOUT SECTION */
+
+.about-section h3 {
+    margin: 10vh 0 0 0;
+    font-weight: 50;
+}
+
+.about-section p {
+    font-size: 1.5em;
+    font-weight: 50;
+}
+
+.about-section {
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+}
+
+@media (orientation: portrait) {
+    .about-section h3 {
+        padding-left: 3vw;
+    }
+
+    .about-section p {
+        padding: 0 3vw;
+    }
+}
+
+@media (orientation: landscape) {
+    .about-section h3 {
+        padding-left: 20vw;
+        padding-right: 30vw;
+    }
+
+    .about-section p {
+        padding: 0 30vw 0 20vw;
+    }
+}
+
+
+/* CLIENT SECTION */
+
+.client-section-container {
+    width: 90%;
+    margin: 30vh auto;
+}
+
+.client-section {
+    width: 100%;
+}
+
+.client-section h3 {
+    font-size: 4em;
+    margin: 0 0 50px 0;
+}
+
+
+/* CLIENT HEADERS */
+
+.client-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.4fr;
+
+    padding: 15px 10px;
+    border-bottom: 1px solid #373737;
+
+    font-family: Helvetica, sans-serif;
+    font-size: 0.7em;
+    color: #777777;
+}
+
+
+/* CLIENT ROWS */
+
+.client-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.4fr;
+    align-items: center;
+
+    position: relative;
+    padding: 25px 10px;
+
+    border-bottom: 1px solid #dddddd;
+
+    text-decoration: none;
+    color: #373737;
+
+    transition: color 0.3s ease;
+} 
+
+.client-name {
+    font-family: Helvetica, sans-serif;
+    font-size: clamp(1.5rem, 3vw, 3.5rem);
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.client-type,
+.client-year {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.85em;
+}
+
+
+/* ROW HOVER EFFECT */
+
+.client-item:hover {
+    color: #999999;
+}
+
+
+
+/* FLOATING PROJECT CARD */
+
+.client-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 340px;
+    padding: 12px;
+
+    background: #ffffff;
+    border: 1px solid #373737;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    z-index: 1000;
+
+    transform: translate(-50%, -50%) scale(0.95);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s;
+}
+
+.client-item:hover .client-preview {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* CARD IMAGE */
+
+.client-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CARD CONTENT */
+
+.preview-info {
+    padding: 12px 4px 4px;
+}
+
+.preview-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.preview-title h4 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #373737;
+    margin: 0;
+}
+
+.preview-title span {
+    font-size: 1.4rem;
+    color: #373737;
+}
+
+.preview-info p {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #666666;
+    margin: 12px 0;
+}
+
+.preview-category {
+    display: block;
+    font-family: Helvetica, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: #999999;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .client-preview {
+        display: none;
+    }
+}
+
+
+/* INDIE DEVELOPMENT */
+
+.indie-section {
+    width: 90%;
+    margin: 30vh auto;
+    color: #373737;
+}
+
+.indie-heading {
+    margin-bottom: 30px;
+}
+
+.indie-heading h3 {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 400;
+    margin: 10px 0 0;
+}
+
+.indie-eyebrow {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+/* LARGE VIDEO */
+
+.indie-video-container {
+    width: 100%;
+    border-top: 1px solid #373737;
+    padding-top: 25px;
+}
+
+.indie-video-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #222;
+}
+
+/* VIDEO CAPTION */
+
+.indie-video-caption {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 35px;
+
+    font-family: Helvetica, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    color: #888;
+}
+
+/* STATS */
+
+.indie-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+}
+
+
+
+.indie-stat h4 {
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(5rem, 9vw, 11rem);
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
+}
+
+
+
+/* DESCRIPTION */
+
+.indie-description {
+    margin-top: 70px;
+    margin-right: 20vw;
+    padding-top: 25px;
+}
+
+.indie-description p {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .indie-section {
+        width: 94%;
+        margin: 15vh auto;
+    }
+
+    .indie-stats {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 25px;
+    }
+
+    .indie-stat h4 {
+        font-size: 6rem;
+    }
+
+    .indie-video-caption {
+        font-size: 0.55rem;
+    }
+
+}
+
+
+
+
+/* REMOVE DEFAULT PAGE SPACING */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #080808;
+    color: #ffffff;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    min-height: 80vh;
+    padding: 6vw 4vw 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* MAIN CONTENT */
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-main h2 {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-weight: 400;
+
+    font-size: clamp(5rem, 11vw, 12rem);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+
+    margin: 0 0 45px;
+    color: #ffffff;
+}
+
+/* GET IN TOUCH */
+
+.footer-email {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.2rem;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 8px;
+
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-email:hover {
+    color: #de3c4b;
+    border-color: #de3c4b;
+}
+
+/* BOTTOM SECTION */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    border-top: 1px solid #444444;
+    padding-top: 20px;
+
+    font-family: Helvetica, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+
+    color: #888888;
+}
+
+.footer-bottom a {
+    color: #888888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .footer {
+        min-height: 65vh;
+        padding: 50px 5vw 25px;
+    }
+
+    .footer-main h2 {
+        font-size: clamp(4rem, 14vw, 7rem);
+        margin-bottom: 35px;
+    }
+
+    .footer-email {
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+

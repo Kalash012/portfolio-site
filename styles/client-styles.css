@@ -1,0 +1,264 @@
+p{
+  font-family: Helvetica, sans-serif;  
+}
+
+
+
+h1 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: 3em;
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+}
+
+.back-button {
+    display: block;
+    width: fit-content;
+    margin-bottom: 30px;
+    color: black;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.full-card {
+    display: flex;
+    width: 100%;
+    min-height: 0;
+    flex: 1;
+    align-items: stretch;
+}
+
+.box {
+    min-width: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+}
+
+/* LEFT IMAGE */
+
+.box:first-child {
+    flex: 0 0 30%;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* RIGHT TEXT */
+
+#box1 {
+    flex: 1;
+    border-left: 1px solid black;
+    padding-left: 20px;
+}
+
+#box1 h1 {
+    margin-top: 0;
+    line-height: 0;
+    padding-top: 30px;
+}
+
+#box1 h2 {
+    font-family: Helvetica, sans-serif;
+    color: #373737;
+    font-weight: 100;
+    font-size: 0.75em;
+}
+
+#box1 p{
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .full-card {
+        flex-direction: column;
+    }
+
+    .box:first-child{
+        border: none;
+    }
+
+    .box:first-child {
+        flex: none;
+        width: 100%;
+    }
+
+    .box img {
+        height: auto;
+        max-height: 250px;
+    }
+
+    #box1 {
+        width: 100%;
+        border-left: none;
+        padding-left: 10px;
+    }
+}
+
+
+/* REMOVE DEFAULT PAGE SPACING */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #080808;
+    color: #ffffff;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    flex: 0 0 45%;
+    min-height: 0;
+    padding: 3vw 4vw 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* MAIN CONTENT */
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-main h2 {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(3rem, 7vw, 7rem);
+    line-height: 0.9;
+    margin: 0 0 20px;
+    color: white;
+}
+
+/* GET IN TOUCH */
+
+.footer-email {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.2rem;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 8px;
+
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-email:hover {
+    color: #de3c4b;
+    border-color: #de3c4b;
+}
+
+/* BOTTOM SECTION */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    border-top: 1px solid #444444;
+    padding-top: 20px;
+
+    font-family: Helvetica, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+
+    color: #888888;
+}
+
+.footer-bottom a {
+    color: #888888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .footer {
+        min-height: 65vh;
+        padding: 50px 5vw 25px;
+    }
+
+    .footer-main h2 {
+        font-size: clamp(4rem, 14vw, 7rem);
+        margin-bottom: 35px;
+    }
+
+    .footer-email {
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px), (max-height: 650px) {
+    html, body {
+        height: auto;
+        overflow: auto;
+    }
+
+    body {
+        height: auto;
+        min-height: 100dvh;
+    }
+
+    .footer {
+        flex: none;
+        min-height: 50vh;
+    }
+}
