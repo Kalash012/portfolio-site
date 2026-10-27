@@ -1,5 +1,6 @@
 p{
-  font-family: Helvetica, sans-serif;  
+  font-family: Helvetica, sans-serif;
+  margin-right: 20px;
 }
 
 
@@ -234,15 +235,12 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
     overflow: hidden;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    height: 100dvh;
     box-sizing: border-box;
 }
 
