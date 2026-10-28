@@ -1,3 +1,7 @@
+body{
+    min-height: 100vh;
+}
+
 p{
   font-family: Helvetica, sans-serif;
   margin-right: 20px;
@@ -89,7 +93,7 @@ a:hover{
 
 /* MOBILE */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .full-card {
         flex-direction: column;
     }
@@ -207,7 +211,7 @@ html, body {
 
 /* MOBILE */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
     .footer {
         min-height: 65vh;
@@ -244,7 +248,7 @@ body {
     box-sizing: border-box;
 }
 
-@media (max-width: 768px), (max-height: 650px) {
+@media (max-width: 900px), (max-height: 650px) {
     html, body {
         height: auto;
         overflow: auto;
